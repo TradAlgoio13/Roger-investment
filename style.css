@@ -567,5 +567,24 @@ font-size:32px;
 .section-title h2{
     margin-top:0;
 }
+    @media(max-width:600px){
+
+.hero{
+    flex-direction:column;
+    padding:25px 6%;
+    min-height:auto;
+}
+
+.hero-left{
+    width:100%;
+}
+
+.hero-right{
+    width:100%;
+}
+
+.plans{
+    padding:25px 6%;
+}
 
 }
