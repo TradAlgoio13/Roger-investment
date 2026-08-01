@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogers Investment | AI Powered Investing</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2>Rogers Investment</h2>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Plans</a></li>
+            <li><a href="#">AI Investing</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <a href="#" class="btn">Start Investing</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="tag">🚀 AI Powered Investment Platform</span>
+
+        <h1>
+            Grow Your Wealth<br>
+            With Smart AI Investing
+        </h1>
+
+        <p>
+            Experience AI-assisted investing with transparent investment plans,
+            secure USDT (TRC20) deposits, and a modern investment platform
+            designed for long-term growth.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#" class="btn">Start Investing</a>
+            <a href="#" class="btn2">View Plans</a>
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="card">
+            <h3>AI Portfolio</h3>
+
+            <h1>$245,860</h1>
+
+            <p>Portfolio Performance</p>
+
+            <div class="profit">
+                ▲ +12.48%
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="plans">
+
+    <div class="section-title">
+        <h2>Investment Plans</h2>
+        <p>Choose the plan that best fits your investment goals.</p>
+    </div>
+
+    <div class="plans-container">
+
+        <div class="plan-card">
+            <h3>Starter</h3>
+            <h1>$30</h1>
+            <p>Minimum Investment</p>
+
+            <ul>
+                <li>✔ AI Assisted Investing</li>
+                <li>✔ Daily Compounding</li>
+                <li>✔ USDT (TRC20)</li>
+                <li>✔ Secure Platform</li>
+            </ul>
+
+            <a href="#" class="btn">Invest Now</a>
+        </div>
+
+        <div class="plan-card featured">
+            <h3>Standard</h3>
+            <h1>$50</h1>
+            <p>Popular Plan</p>
+
+            <ul>
+                <li>✔ AI Assisted Investing</li>
+                <li>✔ Daily Compounding</li>
+                <li>✔ Priority Support</li>
+                <li>✔ USDT (TRC20)</li>
+            </ul>
+
+            <a href="#" class="btn">Invest Now</a>
+        </div>
+
+        <div class="plan-card">
+            <h3>Premium</h3>
+            <h1>$100</h1>
+            <p>Professional Investors</p>
+
+            <ul>
+                <li>✔ AI Assisted Investing</li>
+                <li>✔ Daily Compounding</li>
+                <li>✔ Dedicated Support</li>
+                <li>✔ USDT (TRC20)</li>
+            </ul>
+
+            <a href="#" class="btn">Invest Now</a>
+        </div>
+
+    </div>
+
+</section>
+<section class="features">
+
+    <div class="section-title">
+        <h2>Why Choose Rogers Investment?</h2>
+        <p>Smart investing powered by technology.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-box">
+            <h3>🤖 AI-Assisted Investing</h3>
+            <p>Advanced algorithms help analyze market opportunities and support investment decisions.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>📈 Compounding Strategy</h3>
+            <p>Growth is based on your selected investment plan and the platform's investment approach.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>🔒 Secure Payments</h3>
+            <p>Fast and secure deposits using USDT (TRC20).</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>🌍 Global Access</h3>
+            <p>Access your investment platform anytime, from anywhere.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="deposit">
+
+    <div class="section-title">
+        <h2>Deposit with USDT (TRC20)</h2>
+        <p>Fund your investment securely using Tether (USDT) on the TRC20 network.</p>
+    </div>
+
+    <div class="deposit-card">
+
+     <h3>Wallet Address</h3>
+
+<input
+    type="text"
+    id="wallet"
+    value="TK2QUyTC4gqUCnSRZrEsVYKjzo7sMZ8zNP"
+    readonly
+    class="wallet-input">
+
+<button onclick="copyWallet()" class="btn">
+    Copy Wallet Address
+</button>
+
+<br><br>
+
+<img src="images/qr.png" alt="USDT QR Code" class="qr">
+
+<br><br>
+
+<button type="button" class="btn" onclick="openPopup()">
+    I've Paid
+</button>
+
+    </div>
+
+</section>
+<!-- Deposit Confirmation Popup -->
+<div id="depositPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-popup" onclick="closePopup()">&times;</span>
+
+    <div class="popup-header">
+    <div class="popup-logo">💎</div>
+    <h2>Rogers Investment</h2>
+    <p>Secure USDT (TRC20) Deposit Verification</p>
+</div>
+
+    <form id="depositForm">
+
+      <label>Full Name</label>
+      <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label>Deposit Amount (USDT)</label>
+      <input type="number" id="depositAmount" placeholder="Amount" required>
+
+      <label>Transaction ID (TXID)</label>
+      <input type="text" id="txid" placeholder="Paste your TXID" required>
+
+      <label>Payment Screenshot</label>
+
+<div class="upload-box">
+    <input type="file" id="paymentProof" accept="image/*" required>
+    <span>📤 Click here to upload your payment screenshot</span>
+    <small>PNG, JPG or JPEG</small>
+</div>
+
+      <label>Notes (Optional)</label>
+      <textarea id="notes" rows="3" placeholder="Any additional information"></textarea>
+
+      <button type="submit" class="submit-btn">Submit Deposit</button>
+
+    </form>
+    <div id="loadingMessage" class="loading-box" style="display:none;">
+
+    <div class="loader"></div>
+
+    <h2>Submitting Deposit...</h2>
+
+    <p>
+        Please wait while we securely submit your
+        deposit request.
+    </p>
+
+</div>
+    <div id="successMessage" class="success-box" style="display:none;">
+    <div class="success-icon">✅</div>
+    <h2>Deposit Submitted!</h2>
+    <p>
+        Thank you for your deposit request.<br><br>
+        Our finance team will verify your payment within
+        <strong>1–24 hours</strong>.
+    </p>
+
+    <button class="submit-btn" onclick="closePopup()">
+        Close
+    </button>
+</div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
