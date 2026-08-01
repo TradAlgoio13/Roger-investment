@@ -1842,4 +1842,19 @@ font-size:15px;
 
 }
 
+}.hero-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:linear-gradient(135deg,#ffd700,#ff9800);
+    color:#111;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:50px;
+    transition:0.3s;
+    box-shadow:0 0 20px rgba(255,193,7,.4);
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 30px rgba(255,193,7,.8);
 }
