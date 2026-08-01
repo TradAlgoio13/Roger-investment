@@ -545,5 +545,27 @@ width:95%;
 .section-title h2{
 font-size:32px;
 }
+@media(max-width:600px){
+
+.hero{
+    padding:40px 6%;
+    min-height:auto;
+}
+
+.plans{
+    padding:40px 6%;
+}
+
+.features{
+    padding:40px 6%;
+}
+
+.section-title{
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    margin-top:0;
+}
 
 }
