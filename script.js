@@ -1,4 +1,3 @@
-alert("Script Loaded");
 function copyWallet() {
     let wallet = document.getElementById("wallet");
     wallet.select();
