@@ -46,3 +46,59 @@ document.getElementById("depositForm").addEventListener("submit", function(e) {
     },2000);
 
 });
+// Premium Counter Animation
+
+const counters = document.querySelectorAll(".counter");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+        const target = parseFloat(counter.dataset.target);
+
+        let current = 0;
+
+        const increment = target / 100;
+
+        const update = () => {
+
+            current += increment;
+
+            if (current >= target) {
+
+                counter.innerText = target;
+
+            } else {
+
+                if (target % 1 !== 0) {
+                    counter.innerText = current.toFixed(1);
+                } else {
+                    counter.innerText = Math.floor(current);
+                }
+
+                requestAnimationFrame(update);
+            }
+
+        };
+
+        update();
+
+        observer.unobserve(counter);
+
+    });
+
+});
+
+counters.forEach(counter => observer.observe(counter));
+function previewPayment(event){
+
+    const image = document.getElementById("paymentPreview");
+
+    image.src = URL.createObjectURL(event.target.files[0]);
+
+    image.style.display = "block";
+
+}
