@@ -504,21 +504,27 @@ margin-bottom:12px;
 color:#aaa;
 line-height:1.7;
 
-}@media(max-width:600px){
-
-body{
-    overflow-x:hidden;
+/* Fix mobile black gaps */
+body {
+    overflow-x: hidden;
 }
 
-.hero{
-    padding:20px 6% !important;
-    min-height:0 !important;
-    margin:0 !important;
+section {
+    margin: 0 !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    min-height: auto !important;
+    height: auto !important;
 }
 
-.plans{
-    padding-top:20px !important;
-    margin-top:0 !important;
-}
-
+.hero,
+.hero-section,
+.grow-wealth,
+.plans {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    min-height: auto !important;
+    height: auto !important;
 }
